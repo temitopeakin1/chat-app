@@ -1,10 +1,13 @@
 
-import DarkModeToggle from "@/components/ui/DarkModeToggle";
+import DarkModeToggle from "@/components/DarkModeToggle";
 import Logo from "./Logo";
-import UserButton from "@/components/ui/UserButton";
+import UserButton from "@/components/UserButton";
+import { authOptions } from "@/auth";
+import { getServerSession } from "next-auth";
 
 
-const Header = () => {
+async function Header() {
+  const session =  await getServerSession(authOptions)
   return (
     <header className="sticky top-0 z-50 bg-white dark:bg-gray-900">
       <nav className="flex flex-col sm:flex-row items-center p-5 pl-2 bg-white dark:bg-gray-900 max-w-7xl mx-auto">

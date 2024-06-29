@@ -5,15 +5,15 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "@/components/dropdown-menu";
 import UserAvatar from "./UserAvatar";
 
 
 const UserButton = () => {
   return (
-    <DropdownMenu>
+    <DropdownMenu> 
       <DropdownMenuTrigger>
-        <UserAvatar />
+        <UserAvatar name="Temitope Akin" image="/images/avatar.jpg" />
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
